@@ -1,0 +1,33 @@
+@import '../screen-widths.scss';
+.beer-list-container {
+    display: grid;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    padding: 15px;
+
+}
+
+@media screen and (max-width: $mobile) {
+    .beer-list-container {
+        grid-template-columns: repeat(2, 1fr [col-start]);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+
+        app-beer /deep/ {
+            height: 100px;
+        }
+    }
+}
+
+@media screen and (min-width: $mobile) and (max-width: $tablet) {
+    .beer-list-container {
+        grid-template-columns: repeat(4, 1fr [col-start]);
+        
+    }
+}
+
+@media screen and (min-width: $tablet) {
+    .beer-list-container {
+        grid-template-columns: repeat(6, 1fr [col-start]);
+    }
+}
