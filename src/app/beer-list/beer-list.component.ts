@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core';
-import { Beer } from '../models/beer';
+import { Beverage } from '../models/beer';
 import { BackendService } from '../backend.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { BackendService } from '../backend.service';
   styleUrls: ['./beer-list.component.scss']
 })
 export class BeerListComponent implements OnInit, OnDestroy {
-  public beers: Beer[] = [];
+  public beers: Beverage[] = [];
   private subscriptions = new Map();
 
   constructor(private backendService: BackendService, private ref: ChangeDetectorRef) {

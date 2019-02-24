@@ -1,4 +1,4 @@
-export class Beer {
+export class Beverage {
     id: number;
     bier: string;
     stijl: string;

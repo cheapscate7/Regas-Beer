@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Beer } from './models/beer';
+import { Beverage } from './models/beer';
 import { BackendService } from './backend.service';
 import { BeverageOptions } from './types/BeverageOptions';
 
@@ -7,7 +7,7 @@ import { BeverageOptions } from './types/BeverageOptions';
   providedIn: 'root'
 })
 export class BeerService {
-  private beers: Beer[] = [];
+  private beers: Beverage[] = [];
 
   constructor(private backend: BackendService) { }
 
