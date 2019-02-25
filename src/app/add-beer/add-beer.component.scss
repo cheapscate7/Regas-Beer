@@ -1,13 +1,42 @@
-button {
-    width: 30px;
-    height: 30px;
-    border: 0;
-    border-radius: 50%;
-    cursor: pointer;
+@import '../mixins.scss';
+
+.add-button {
     &:hover {
-        background-color: red;
-        color: white;
+        button {
+            background-color: red;
+            color: white;
+            @include rotate();
+        }
+        .tooltiptext {
+            visibility: visible;
+        }
     }
+    button {
+        width: 30px;
+        height: 30px;
+        border: 0;
+        border-radius: 50%;
+        cursor: pointer;
+        outline: none;
+        @include animate();
+    }
+
+    .tooltiptext {
+        visibility: hidden;
+        width: 150px;
+        font-size: 9pt;
+        background-color: lightgrey;
+        color: black;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        
+        position: absolute;
+        z-index: 1;
+        bottom: 110%;
+        left: 50%;
+        margin-left: -60px;
+      }
 }
 
 
@@ -42,3 +71,4 @@ button {
     }
 
 }
+

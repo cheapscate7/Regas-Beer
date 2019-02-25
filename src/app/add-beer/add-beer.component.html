@@ -1,4 +1,8 @@
-<button (click)="toggle()">+</button>
+<div class="add-button">
+    <button (click)="toggle()">+</button>
+    <span *ngIf="!open" class="tooltiptext">Klik om een nieuwe bier toevoegen</span>
+</div>
+
 <div *ngIf="open" class="add-beer">
   <form ([formGroup])="profileForm" (ngSubmit)= "submit(formdata.value)">
     <input type="text" placeholder="Bier" formControlName="Bier">
