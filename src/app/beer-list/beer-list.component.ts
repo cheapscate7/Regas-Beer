@@ -9,7 +9,7 @@ import { bieren } from '../../assets/db.json';
   styleUrls: ['./beer-list.component.scss']
 })
 export class BeerListComponent implements OnInit, OnDestroy {
-  public beers = bieren;
+  public beers: Beer[];
   private subscriptions = new Map();
 
   constructor(private backendService: BackendService, private ref: ChangeDetectorRef) {
@@ -19,12 +19,12 @@ export class BeerListComponent implements OnInit, OnDestroy {
     /*
     UNCOMMENT THIS IF GETTING DATA FROM DATABASE
     */
-    // this.subscriptions.set(0, this.backendService.getAllOfType('bieren').subscribe(
-    //   data => {
-    //     this.beers = data;
-    //     this.ref.markForCheck();
-    //   }
-    // ));
+    this.subscriptions.set(0, this.backendService.getAllOfType('bieren').subscribe(
+      data => {
+        this.beers = data;
+        this.ref.markForCheck();
+      }
+    ));
   }
 
   ngOnDestroy() {

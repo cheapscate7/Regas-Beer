@@ -37,7 +37,7 @@ export class BackendService {
     // delete a record of type
   }
 
-  public addOfType() {
+  public addOfType(type: BeverageOptions) {
     // add a new record of type
   }
 
