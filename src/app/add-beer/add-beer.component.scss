@@ -42,8 +42,8 @@
 
 .add-beer {
     position: absolute;
-    left: -199px;
-    top: 35px;
+    left: -204px;
+    top: 25px;
     background-color: white;
     padding: 15px;
     border: 1px solid grey;
@@ -70,5 +70,15 @@
         }
     }
 
+    &::after {
+        content: " ";
+        position: absolute;
+        bottom: 100%;  /* At the top of the tooltip */
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent grey transparent;
+    }
 }
 
