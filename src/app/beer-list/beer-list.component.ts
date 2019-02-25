@@ -10,6 +10,7 @@ import { bieren } from '../../assets/db.json';
 })
 export class BeerListComponent implements OnInit, OnDestroy {
   public beers: Beer[];
+  private beerSearchList: Beer[];
   private subscriptions = new Map();
 
   constructor(private backendService: BackendService, private ref: ChangeDetectorRef) {
@@ -22,6 +23,7 @@ export class BeerListComponent implements OnInit, OnDestroy {
     this.subscriptions.set(0, this.backendService.getAllOfType('bieren').subscribe(
       data => {
         this.beers = data;
+        this.beerSearchList = data;
         this.ref.markForCheck();
       }
     ));
@@ -35,13 +37,14 @@ export class BeerListComponent implements OnInit, OnDestroy {
 
   public search(text: string) {
     if (text === '') {
-      this.beers = bieren;
-      this.ref.markForCheck();
+      this.beers = this.beerSearchList;
     } else {
-      this.beers = this.beers.filter((beer) => {
+      this.beers = this.beerSearchList.filter((beer) => {
         return beer.Bier.toLowerCase().indexOf(text.toLowerCase()) > -1;
       });
     }
+    this.ref.markForCheck();
+
   }
 
 }

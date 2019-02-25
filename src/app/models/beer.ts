@@ -1,10 +1,10 @@
 export class Beer {
     id: number;
-    bier: string;
-    stijl: string;
-    stamwortgehalte: string;
-    alcoholpercentage: string;
-    gistering: string;
-    sinds: number;
-    brouwerij: string;
+    Bier: string;
+    Stijl: string;
+    Stamwortgehalte: string;
+    Alcoholpercentage: string;
+    Gistering: string;
+    Sinds: number;
+    Brouwerij: string;
 }
