@@ -4,6 +4,7 @@
 </div>
 
 <div *ngIf="open" class="add-beer">
+  <h1>Nieuwe bier</h1>
   <form ([formGroup])="profileForm" (ngSubmit)= "submit(formdata.value)">
     <input type="text" placeholder="Bier" formControlName="Bier">
     <input type="text" placeholder="Stijl" formControlName="Stijl">

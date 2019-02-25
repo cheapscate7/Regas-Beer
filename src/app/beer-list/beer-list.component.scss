@@ -9,10 +9,10 @@ app-add-beer /deep/ {
     grid-column-gap: 15px;
     grid-row-gap: 15px;
     grid-auto-rows: 1fr;
-    margin: auto;
     max-width: 95%;
+    margin: auto;
     justify-items: stretch;
-    align-items: stretch
+    align-items: stretch;
 }
 
 @media screen and (max-width: $mobile) {
