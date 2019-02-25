@@ -1,12 +1,14 @@
 <button (click)="toggle()">+</button>
 <div *ngIf="open" class="add-beer">
-  <input type="text" placeholder="Bier">
-  <input type="text" placeholder="Stijl">
-  <input type="text" placeholder="Stamwortgehalte">
-  <input type="text" placeholder="Alcoholpercentage">
-  <input type="text" placeholder="Gistering">
-  <input type="text" placeholder="Sinds">
-  <input type="text" placeholder="Brouwerij">
-  <button type="submit">Add</button>
+  <form ([formGroup])="profileForm" (ngSubmit)= "submit(formdata.value)">
+    <input type="text" placeholder="Bier" formControlName="Bier">
+    <input type="text" placeholder="Stijl" formControlName="Stijl">
+    <input type="text" placeholder="Stamwortgehalte" formControlName="Stamwortgehalte">
+    <input type="text" placeholder="Alcoholpercentage" formControlName="Alcoholpercentage">
+    <input type="text" placeholder="Gistering" formControlName="Gistering">
+    <input type="text" placeholder="Sinds" formControlName="Sinds">
+    <input type="text" placeholder="Brouwerij" formControlName="Brouwerij">
+    <button type="submit">Add</button>
+  </form>
 </div> 
 
