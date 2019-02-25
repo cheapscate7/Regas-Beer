@@ -1,4 +1,5 @@
-<app-search></app-search>
+
+<app-search (change)="search($event)"></app-search> <app-add-beer></app-add-beer>
 <div class="beer-list-container">
-  <app-beer *ngFor="let beer of beers" beer="beer"></app-beer>
+  <app-beer *ngFor="let beer of beers" [beer]="beer"></app-beer>
 </div>

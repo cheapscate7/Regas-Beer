@@ -1,7 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
 h1 {
     font-family: 'Lobster', cursive;
     color: rgb(129, 223, 255);
+}
+
+h2, p {
+    font-family: 'Lato', sans-serif;
+    color: rgb(111, 190, 216);
+}
+
+p {
+    color: rgb(101, 172, 196);
+}
+
+input {
+    font-family: 'Lato', sans-serif;
 }
 
 body {

@@ -1,9 +1,12 @@
 .beer-container {
-    height: 300px;
+    min-height: 300px;
     width: 100%;
     display: flex;
-    justify-content: stretch;
-    .img{
-        height: auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid grey;
+    img{
+        height: 30%;
     }
 }

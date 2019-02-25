@@ -20,7 +20,6 @@ export class BackendService {
         if (!res) {
           this.noDataErrror();
         } else {
-          console.log(res[type])
           return res[type];
         }
       }),

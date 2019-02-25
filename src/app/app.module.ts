@@ -9,6 +9,7 @@ import { SearchComponent } from './search/search.component';
 import { BackendService } from './backend.service';
 import { BeerService } from './beer.service';
 import { HttpClientModule } from '@angular/common/http';
+import { AddBeerComponent } from './add-beer/add-beer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponentComponent,
     BeerListComponent,
     BeerComponent,
-    SearchComponent
+    SearchComponent,
+    AddBeerComponent
   ],
   imports: [
     BrowserModule,

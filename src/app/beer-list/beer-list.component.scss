@@ -1,10 +1,15 @@
 @import '../screen-widths.scss';
+app-add-beer /deep/ {
+    position: relative;
+    bottom: 55px;
+    left: 85%;
+}
 .beer-list-container {
     display: grid;
     grid-column-gap: 15px;
     grid-row-gap: 15px;
-    padding: 15px;
-
+    margin: auto;
+    max-width: 95%;
 }
 
 @media screen and (max-width: $mobile) {
