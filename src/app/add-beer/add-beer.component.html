@@ -3,16 +3,16 @@
     <span *ngIf="!open" class="tooltiptext">{{ 'add-beer.tooltip' | translate }}</span>
 </div>
 
-<div *ngIf="open" class="add-beer">
+<div *ngIf="open" class="add-beer form-group">
   <h1>{{ 'add-beer.title' | translate }}</h1>
-  <form ([formGroup])="profileForm" (ngSubmit)= "submit(formdata.value)">
-    <input type="text" placeholder="{{ 'add-beer.placeholders.beer' | translate }}" formControlName="Bier">
-    <input type="text" placeholder="{{ 'add-beer.placeholders.style' | translate }}" formControlName="Stijl">
-    <input type="text" placeholder="{{ 'add-beer.placeholders.stamwortgehalte' | translate }}" formControlName="Stamwortgehalte">
-    <input type="text" placeholder="{{ 'add-beer.placeholders.alcoholpercentage' | translate }}" formControlName="Alcoholpercentage">
-    <input type="text" placeholder="{{ 'add-beer.placeholders.gistering' | translate }}" formControlName="Gistering">
-    <input type="text" placeholder="{{ 'add-beer.placeholders.since' | translate }}" formControlName="Sinds">
-    <input type="text" placeholder="{{ 'add-beer.placeholders.brewery' | translate }}" formControlName="Brouwerij">
+  <form (ngSubmit)= "submit()">
+    <input type="text" name="beer" class="form-control" type="text" placeholder="{{ 'add-beer.placeholders.beer' | translate }}" [(ngModel)]="model.Bier">
+    <input type="text" name="style" class="form-control" type="text" placeholder="{{ 'add-beer.placeholders.style' | translate }}" [(ngModel)]="model.Stijl">
+    <input type="text" name="stamwortgehalte" class="form-control" type="text" placeholder="{{ 'add-beer.placeholders.stamwortgehalte' | translate }}" [(ngModel)]="model.Stamwortgehalte">
+    <input type="text" name="alcoholpercentage" class="form-control" type="text" placeholder="{{ 'add-beer.placeholders.alcoholpercentage' | translate }}" [(ngModel)]="model.Alcoholpercentage">
+    <input type="text" name="gistering" class="form-control" type="text" placeholder="{{ 'add-beer.placeholders.gistering' | translate }}" [(ngModel)]="model.Gistering">
+    <input type="text" name="since" class="form-control" type="text" placeholder="{{ 'add-beer.placeholders.since' | translate }}" [(ngModel)]="model.Sinds">
+    <input type="text" name="brewery" class="form-control" type="text" placeholder="{{ 'add-beer.placeholders.brewery' | translate }}" [(ngModel)]="model.Brouwerij">
     <button type="submit">{{ 'add-beer.submit' | translate }}</button>
   </form>
 </div> 

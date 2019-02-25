@@ -17,9 +17,6 @@ export class BeerListComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    /*
-    UNCOMMENT THIS IF GETTING DATA FROM DATABASE
-    */
     this.subscriptions.set(0, this.backendService.getAllOfType('bieren').subscribe(
       data => {
         this.beers = data;

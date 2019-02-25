@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BeverageOptions } from './types/BeverageOptions';
 import { map } from 'rxjs/operators';
+import { Beer } from './models/beer';
 
 @Injectable({
   providedIn: 'root'
@@ -37,8 +38,10 @@ export class BackendService {
     // delete a record of type
   }
 
-  public addOfType(type: BeverageOptions) {
-    // add a new record of type
+  public addOfType(type: BeverageOptions, beverage) {
+    console.log('backend service');
+    console.log(JSON.stringify(beverage));
+    this.http.post('${this.dbURL}', JSON.stringify(beverage));
   }
 
 

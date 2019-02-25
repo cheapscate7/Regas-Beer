@@ -12,6 +12,7 @@ import { BeerService } from './beer.service';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { AddBeerComponent } from './add-beer/add-beer.component';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { FormsModule } from '@angular/forms';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -30,6 +31,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     TranslateModule.forRoot({
       loader: {
           provide: TranslateLoader,
