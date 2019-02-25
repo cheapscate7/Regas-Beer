@@ -1,0 +1,23 @@
+{
+    "search": {
+        "placeholder": "Search the name of your beer...."
+    },
+    "add-beer": {
+        "tooltip": "Click here to add a beer",
+        "title": "New Beer",
+        "placeholders": {
+            "beer": "Beer",
+            "style": "Style",
+            "stamwortgehalte": "Original Gravity",
+            "alcoholpercentage": "Alcohol Percentage",
+            "gistering": "Strength",
+            "since": "Since",
+            "brewery": "Brewery"
+        },
+        "submit": "add"
+    },
+    "beer": {
+        "stamwortgehalte": "Original Gravity: ",
+        "alcoholpercentage": "Alcohol Percentage: "
+    }
+}

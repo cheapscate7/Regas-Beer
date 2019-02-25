@@ -2,6 +2,6 @@
   <img src="{{beerIcon}}" />
   <h2>{{beer.Bier}}</h2>
   <div class="info"><p>{{beer.Stijl}}</p><p>{{beer.Sinds}}</p></div>
-  <p *ngIf="beer.Stamwortgehalte">Stamwortgehalte: {{beer.Stamwortgehalte}}</p>
-  <p *ngIf="beer.Alcoholpercentage">Alcoholpercentage: {{beer.Alcoholpercentage}}</p>
+  <p *ngIf="beer.Stamwortgehalte">{{ 'beer.stamwortgehalte' | translate }}{{beer.Stamwortgehalte}}</p>
+  <p *ngIf="beer.Alcoholpercentage">{{ 'beer.alcoholpercentage' | translate }}{{beer.Alcoholpercentage}}</p>
 </div>

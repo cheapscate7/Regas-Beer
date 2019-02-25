@@ -1,0 +1,23 @@
+{
+    "search": {
+        "placeholder": "Zoek voor de naam van jou bier...."
+    },
+    "add-beer": {
+        "tooltip": "klik om een bier toevoegen",
+        "title": "Nieuwe Bier",
+        "placeholders": {
+            "beer": "Bier",
+            "style": "Stijl",
+            "stamwortgehalte": "Stamwortgehalte",
+            "alcoholpercentage": "Alcoholpercentage",
+            "gistering": "Gistering",
+            "since": "Sinds",
+            "brewery": "Brewerij"
+        },
+        "submit": "Verzonden"
+    },
+    "beer": {
+        "stamwortgehalte": "Stamwortgehalte: ",
+        "alcoholpercentage": "Alcoholpercentage: "
+    }
+}

@@ -1,19 +1,19 @@
 <div class="add-button">
     <button (click)="toggle()">+</button>
-    <span *ngIf="!open" class="tooltiptext">Klik om een nieuwe bier toevoegen</span>
+    <span *ngIf="!open" class="tooltiptext">{{ 'add-beer.tooltip' | translate }}</span>
 </div>
 
 <div *ngIf="open" class="add-beer">
-  <h1>Nieuwe bier</h1>
+  <h1>{{ 'add-beer.title' | translate }}</h1>
   <form ([formGroup])="profileForm" (ngSubmit)= "submit(formdata.value)">
-    <input type="text" placeholder="Bier" formControlName="Bier">
-    <input type="text" placeholder="Stijl" formControlName="Stijl">
-    <input type="text" placeholder="Stamwortgehalte" formControlName="Stamwortgehalte">
-    <input type="text" placeholder="Alcoholpercentage" formControlName="Alcoholpercentage">
-    <input type="text" placeholder="Gistering" formControlName="Gistering">
-    <input type="text" placeholder="Sinds" formControlName="Sinds">
-    <input type="text" placeholder="Brouwerij" formControlName="Brouwerij">
-    <button type="submit">Add</button>
+    <input type="text" placeholder="{{ 'add-beer.placeholders.beer' | translate }}" formControlName="Bier">
+    <input type="text" placeholder="{{ 'add-beer.placeholders.style' | translate }}" formControlName="Stijl">
+    <input type="text" placeholder="{{ 'add-beer.placeholders.stamwortgehalte' | translate }}" formControlName="Stamwortgehalte">
+    <input type="text" placeholder="{{ 'add-beer.placeholders.alcoholpercentage' | translate }}" formControlName="Alcoholpercentage">
+    <input type="text" placeholder="{{ 'add-beer.placeholders.gistering' | translate }}" formControlName="Gistering">
+    <input type="text" placeholder="{{ 'add-beer.placeholders.since' | translate }}" formControlName="Sinds">
+    <input type="text" placeholder="{{ 'add-beer.placeholders.brewery' | translate }}" formControlName="Brouwerij">
+    <button type="submit">{{ 'add-beer.submit' | translate }}</button>
   </form>
 </div> 
 
