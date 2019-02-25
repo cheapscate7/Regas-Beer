@@ -11,6 +11,8 @@ app-add-beer /deep/ {
     grid-auto-rows: 1fr;
     margin: auto;
     max-width: 95%;
+    justify-items: stretch;
+    align-items: stretch
 }
 
 @media screen and (max-width: $mobile) {
